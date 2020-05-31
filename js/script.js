@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function () {
   let mySwiper = new Swiper ('.swiper-container', {
     loop: true,
     slidesPerView: 3,
@@ -61,14 +61,16 @@ $(document).ready(function(){
     $('.popup').fadeOut();
   });
 
-  $('.order').on('click', function(){
-    $('.popup').fadeIn();
-    $('.popup').css('display', 'flex');
-    $('.popup__form-container__form__phone-input').css('display', 'none');
-    $('.popup__form-container__form__phone').css('display', 'none');
+  $('.popup-easy__form-container__container-button__button-mobile').on('click', function(){
+    $('.popup-easy').fadeOut();
   });
 
-  $('.popup').click(function(event){
+  $('.order').on('click', function(){
+    $('.popup-easy').fadeIn();
+    $('.popup-easy').css('display', 'flex');
+  });
+
+  $('.popup, .popup-easy').click(function(event){
     if(event.target == this) {
       $(this).fadeOut();
     }

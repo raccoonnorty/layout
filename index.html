@@ -8,7 +8,7 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-		<link rel="manifest" href="site.webmanifest">
+		<!-- <link rel="manifest" href="site.webmanifest"> -->
 		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 		<meta name="msapplication-TileColor" content="#00aba9">
 		<meta name="theme-color" content="#ffffff">
@@ -29,14 +29,31 @@
 							<span class="popup__form-container__container-button__button-mobile__bottom"></span>
 						</a>
 					</div>
-					<form class="popup__form-container__form flex-container" id="form">
+					<form class="popup__form-container__form flex-container" method="post" action="mail.php">
 						<label class="popup__form-container__form__name default" for="name">Введите своё имя:</label>
-						<input class="popup__form-container__form__name-input default-input" type="text" id="name" placeholder="Иван" name="name" required>
+						<input class="popup__form-container__form__name-input default-input" type="text" id="name" placeholder="Иван" name="name">
 						<label class="popup__form-container__form__phone default" for="phone">Введите свой номер телефона:</label>
-						<input class="popup__form-container__form__phone-input default-input" type="tel" id="phone" placeholder="+7 (___) ___-__-__" name="phone" required>
+						<input class="popup__form-container__form__phone-input default-input" type="tel" id="phone" placeholder="+7 (___) ___-__-__" name="phone">
 						<label class="popup__form-container__form__email default" for="email">Введите свою почту:</label>
-						<input class="popup__form-container__form__email-input default-input" type="email" id="email" placeholder="default@example.com" name="email" required>
-						<input class="popup__form-container__form__button" type="submit" value="Отправить" name="">
+						<input class="popup__form-container__form__email-input default-input" type="email" id="email" placeholder="default@example.com" name="email">
+						<input class="popup__form-container__form__button default-button" type="submit" value="Отправить" name="button">
+					</form>
+				</div>
+			</div>
+			<div class="popup-easy">
+				<div class="popup-easy__form-container flex-container">
+					<div class="popup-easy__form-container__container-button flex-container">
+						<a href="#" class="popup-easy__form-container__container-button__button-mobile">
+							<span class="popup-easy__form-container__container-button__button-mobile__top"></span>
+							<span class="popup-easy__form-container__container-button__button-mobile__bottom"></span>
+						</a>
+					</div>
+					<form class="popup-easy__form-container__form-easy flex-container" method="post" action="mail-second.php">
+						<label class="popup-easy__form-container__form-easy__name default" for="name">Введите своё имя:</label>
+						<input class="popup-easy__form-container__form-easy__name-input default-input" type="text" id="name-easy" placeholder="Иван" name="name">
+						<label class="popup-easy__form-container__form-easy__email default" for="email">Введите свою почту:</label>
+						<input class="popup-easy__form-container__form-easy__email-input default-input" type="email" id="email" placeholder="default@example.com" name="email">
+						<input class="popup-easy__form-container__form-easy__button default-button" type="submit" value="Отправить" name="button">
 					</form>
 				</div>
 			</div>
