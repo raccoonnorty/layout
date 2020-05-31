@@ -44,13 +44,11 @@ $(function () {
   smoothScroll('a.header-link');
   smoothScroll('a.footer-link');
 
-  $('.container__header__button').on('click', function(e){
-    e.preventDefault();
+  $('.container__header__button').on('click', function(){
     $('.menu').fadeIn();
   });
 
-  $('.header-link, .header-link-mobile, .menu__container-button__exitButtom').on('click', function(e){
-    e.preventDefault();
+  $('.header-link, .header-link-mobile, .menu__container-button__exitButtom').on('click', function(){
     $('.menu').fadeOut();
   });
 
@@ -59,13 +57,11 @@ $(function () {
     $('.popup').css('display', 'flex');
   });
 
-  $('.popup__form-container__container-button__button-mobile').on('click', function(e){
-    e.preventDefault();
+  $('.popup__form-container__container-button__button-mobile').on('click', function(){
     $('.popup').fadeOut();
   });
 
-  $('.popup-easy__form-container__container-button__button-mobile').on('click', function(e){
-    e.preventDefault();
+  $('.popup-easy__form-container__container-button__button-mobile').on('click', function(){
     $('.popup-easy').fadeOut();
   });
 
@@ -91,7 +87,10 @@ $(function () {
   let phone = $('#phone').val().trim();
   let email = $('#email').val().trim();
 
-  if (name == '') {
+  let nameEasy = $('#name-easy').val().trim();
+  let emailEasy = $('#email-easy').val().trim();
+
+  if (name == '' && nameEasy == '') {
     $('#error-message').text('Введите имя.');
     return false;
   }
@@ -99,7 +98,7 @@ $(function () {
     $('#error-message').text('Введите номер телефона.');
     return false;
   }
-  else if (email == '') {
+  else if (email == '' && emailEasy == '') {
     $('#error-message').text('Введите email.');
     return false;
   }
@@ -114,6 +113,8 @@ $(function () {
       'name': name,
       'phone': phone,
       'email': email,
+      'nameEasy': nameEasy,
+      'emailEasy': emailEasy
     },
     dataType: 'html',
     beforeSend: function() {
@@ -124,7 +125,7 @@ $(function () {
         alert('Что-то пошло не так. Заявка не оправилась. Попробуйте ещё раз');
       }
       else {
-        $('#form').trigger('reset');
+        $('#form, #form-easy').trigger('reset');
         $('#error-message').text('Заявка отправлена.');
       }
 

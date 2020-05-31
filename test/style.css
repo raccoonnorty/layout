@@ -222,6 +222,8 @@ header {
 .default-input {
 	background: transparent;
 	border: 1px solid transparent;
+	border-image: linear-gradient(to left, #ff8f5a, #ff2f96);
+	border-image-slice: 1;
 	height: 30px;
 	outline: none;
 }
@@ -232,7 +234,7 @@ header {
 }
 
 .default-button {
-	background: linear-gradient(to bottom left, #ff8f5a, #ff2f96);
+	background: linear-gradient(to bottom, #ff8f5a, #ff2f96) fixed;
 	border: none;
 	color: #fff;
 	outline: none;
