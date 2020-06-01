@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
-		<title>(beta) Дипломная работа</title>
+		<title>Дипломная работа</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-		<!-- <link rel="manifest" href="site.webmanifest"> -->
+		<link rel="manifest" href="site.webmanifest">
 		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 		<meta name="msapplication-TileColor" content="#00aba9">
 		<meta name="theme-color" content="#ffffff">
@@ -31,11 +32,11 @@
 					</div>
 					<form class="popup__form-container__form flex-container" id="form">
 						<label class="popup__form-container__form__name default" for="name">Введите своё имя:</label>
-						<input class="popup__form-container__form__name-input default-input" type="text" id="name" placeholder="Иван" id="name" name="name">
+						<input class="popup__form-container__form__name-input default-input" type="text" placeholder="Иван" id="name" name="name">
 						<label class="popup__form-container__form__phone default" for="phone">Введите свой номер телефона:</label>
-						<input class="popup__form-container__form__phone-input default-input" type="tel" id="phone" placeholder="+7 (___) ___-__-__" id="phone" name="phone">
+						<input class="popup__form-container__form__phone-input default-input" type="tel" placeholder="+7 (___) ___-__-__" id="phone" name="phone">
 						<label class="popup__form-container__form__email default" for="email">Введите свою почту:</label>
-						<input class="popup__form-container__form__email-input default-input" type="email" id="email" placeholder="default@example.com" id="email" name="email">
+						<input class="popup__form-container__form__email-input default-input" type="email" placeholder="default@example.com" id="email" name="email">
 						<button class="popup__form-container__form__button default-button" type="button" id="send-button">Отправить</button>
 					</form>
 					<div id="error-message"></div>
@@ -149,28 +150,42 @@
 					</div>
 				</div>
 			</div>
-			<div class="container__block-portfolio flex-container" id="block-portfolio">
-				<h2 class="container__block-portfolio__title">Примеры моих работ</h2>
-				<div class="container__block-portfolio__swiper swiper-container">
-					<div class="container__block-portfolio__swiper__prev swiper-button-prev"></div>
-    				<div class="container__block-portfolio__swiper__next swiper-button-next"></div>
-				    <div class="container__block-portfolio__swiper__wrapper swiper-wrapper">
-				        <div class="container__block-portfolio__swiper__wrapper__slide swiper-slide">
-				        	<img class="container__block-portfolio__swiper__wrapper__slide__img" src="img/image-1.jpg">
-				        	<h2 class="container__block-portfolio__swiper__wrapper__slide__title">Сайт психолога Веры Антоновой</h2>
-				        </div>
-				        <div class="swiper-slide">
-				        	<img class="container__block-portfolio__swiper__wrapper__slide__img" src="img/image-2.jpg">
-				        	<h2 class="container__block-portfolio__swiper__wrapper__slide__title">Сайт магазина детской одежды</h2>
-				        </div>
-				        <div class="swiper-slide">
-				        	<img class="container__block-portfolio__swiper__wrapper__slide__img" src="img/image-3.jpg">
-				        	<h2 class="container__block-portfolio__swiper__wrapper__slide__title">Сайт магазина «Рыболов»</h2>
-				        </div>
-				    </div>
-				    <div class="container__block-portfolio__swiper__pagination swiper-pagination"></div>
+			<div class="block-portfolio">
+				<div class="block-portfolio__container fixed-container">
+					<div class="block-portfolio__container-button flex-container" id="block-portfolio">
+						<h2 class="block-portfolio__container-button__title">Примеры моих работ</h2>
+					</div>
+					<div class="block-portfolio__container__slider-container">
+						<div class="block-portfolio__container__slider-container__button-prev swiper-button-prev"></div>
+					    <div class="block-portfolio__container__slider-container__button-next swiper-button-next"></div>
+						<div class="block-portfolio__container__slider-container__swiper swiper-container">
+						    <div class="block-portfolio__container__slider-container__swiper__wrapper swiper-wrapper">
+						        <div class="block-portfolio__container__slider-container__swiper__wrapper__slide swiper-slide">
+						        	<img class="block-portfolio__container__slider-container__swiper__wrapper__slide__image" src="img/image-1.jpg" alt="Фотография сайта">
+						        	<h2 class="block-portfolio__container__slider-container__swiper__wrapper__slide__title slider-default-title">
+						        		Сайт психолога Веры Антоновой
+						        	</h2>
+						        </div>
+						        <div class="block-portfolio__container__slider-container_swiper__wrapper__slide swiper-slide">
+						        	<img class="block-portfolio__container__slider-container__swiper__wrapper__slide__image" src="img/image-2.jpg" alt="Фотография сайта">
+						        	<h2 class="block-portfolio__container__slider-container__swiper__wrapper__slide__title slider-default-title">
+						        		Сайт магазина детской одежды
+						        	</h2>
+						        </div>
+						        <div class="block-portfolio__container__slider-container__swiper__wrapper__slide swiper-slide">
+						        	<img class="block-portfolio__container__slider-container__swiper__wrapper__slide__image" src="img/image-3.jpg" alt="Фотография сайта">
+						        	<h2 class="block-portfolio__container__slider-container__swiper__wrapper__slide__title slider-default-title">
+						        		Сайт магазина «Рыболов»
+						        	</h2>
+						        </div>
+						    </div>
+						    <div class="block-portfolio__container__slider-container__swiper__pagination swiper-pagination"></div>
+						</div>
+					</div>
+					<div class="block-portfolio__container-button flex-container">
+						<button class="block-portfolio__container-button__button order">Заказать проект</button>
+					</div>
 				</div>
-				<button class="container__block-portfolio__button order">Заказать проект</button>
 			</div>
 			<div class="container__block-price" id="block-price">
 				<div class="container__block-price__background">

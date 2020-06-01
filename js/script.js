@@ -1,24 +1,8 @@
 $(function () {
   let mySwiper = new Swiper ('.swiper-container', {
     loop: true,
-    slidesPerView: 3,
-    spaceBetween: 20,
-    breakpoints: {
-      320: {
-        slidesPerView: 'auto',
-        spaceBetween: 10,
-        slidesOffsetBefore: 10,
-      },
-      768: {
-        slidesPerView: 'auto',
-        spaceBetween: 70,
-        slidesOffsetBefore: 30,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      }
-    },
+    slidesPerView: 1,
+    spaceBetween: 10,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -27,6 +11,16 @@ $(function () {
     	el: '.swiper-pagination',
     	type: 'bullets',
     	clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      }
     }
   });
 
