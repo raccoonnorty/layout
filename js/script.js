@@ -49,8 +49,8 @@ $(function () {
   });
 
   $('.container__header__contacts__button, .container__footer-block__props__button, .container__header__button-mobile').on('click', function(){
-    $('.popup').fadeIn();
-    $('.popup').css('display', 'flex');
+    $('.popup-easy').fadeIn();
+    $('.popup-easy').css('display', 'flex');
   });
 
   $('.popup__form-container__container-button__button-mobile').on('click', function(e){
@@ -64,8 +64,8 @@ $(function () {
   });
 
   $('.order').on('click', function(){
-    $('.popup-easy').fadeIn();
-    $('.popup-easy').css('display', 'flex');
+    $('.popup').fadeIn();
+    $('.popup').css('display', 'flex');
   });
 
   $('.popup, .popup-easy').click(function(event){
@@ -130,14 +130,14 @@ $(function () {
   $('#send-button-easy').on('click', function() {
 
   let nameEasy = $('#name-easy').val().trim();
-  let emailEasy = $('#email-easy').val().trim();
+  let phoneEasy = $('#phone-easy').val().trim();
 
   if (nameEasy == '') {
     $('#error-message-easy').text('Введите имя.');
     return false;
   }
-  else if (emailEasy == '') {
-    $('#error-message-easy').text('Введите email.');
+  else if (phoneEasy == '') {
+    $('#error-message-easy').text('Введите номер телефона.');
     return false;
   }
 
@@ -149,7 +149,7 @@ $(function () {
     cache: false,
     data: {
       'nameEasy': nameEasy,
-      'emailEasy': emailEasy
+      'phoneEasy': phoneEasy
     },
     dataType: 'html',
     beforeSend: function() {
